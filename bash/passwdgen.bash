@@ -19,9 +19,9 @@ ss64pwd_sha256sum() {
 }
 
 ss64pwd_to_clipboard() {
-    if (($1==1)) && which gclip &> /dev/null
+    if (($1==1)) && which gpaste-client &> /dev/null
     then
-        gclip # consumes stdin
+        gpaste-client # consumes stdin
         echo '(in clipboard)'
     else
         cat # consumes stdin
